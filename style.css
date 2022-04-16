@@ -1,0 +1,260 @@
+html {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  text-shadow: 2px 2px black;
+}
+nav a:visited {
+  color: #c3f8de;
+}
+
+nav a:hover {
+  color: #42b67c;
+}
+
+h1 {
+  margin: 0;
+  padding: 0 0 10px 0;
+  text-align: center;
+  color:#4fffa7;
+  font-size: 40px;
+  font-style: italic;
+  text-shadow: 3px 3px black;
+}
+
+h2 {
+  text-align: center;
+  font-size: 36px;
+  font-style: italic;
+  color: #1b0f22;
+  text-decoration: underline;
+  margin-bottom: 30px;
+}
+
+a {
+  text-decoration: none;
+  font-style: normal;
+  color: #8dfdc5;
+}
+
+dt {
+  font-size: 24px;
+}
+
+dd {
+  margin-bottom: 20px;;
+}
+
+fieldset {
+  border: 3px double #2c1936;
+  font-size: 16px;
+}
+
+legend {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.topSection {
+  width: 100%;
+  color: #eeffed;
+  background-color: #2c1936;
+  flex-shrink: 0;
+  border-bottom: 5px groove white;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.middleSection {
+  width: 50%;
+  padding: 20px 40px 40px 40px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #cecece;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 22px;
+  flex: 1 0 auto;
+}
+
+.bottomSection {
+  text-align: center;
+  flex-shrink: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #2c1936;
+  color: #4fffa7;
+  border-top: 5px groove white;
+  border-bottom: 5px groove white;
+  font-style: italic;
+  text-shadow: 3px 3px black;
+}
+
+.main {
+  text-align: center;
+}
+
+.headerLink {
+  text-decoration: none;
+  color: black;
+}
+
+.middleSection a {
+  color: #2e493b;
+}
+
+.introBlurb {
+  font-style: italic;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.imgSource {
+  font-size: 11px;
+}
+
+.storyNavBottom {
+  margin-top: 10px;
+}
+
+/* ALL STYLING FOR TABLE IS BELOW THIS LINE */
+
+.faq {
+  border: 3px solid hsl(0, 0%, 0%);
+  border-collapse: collapse;
+}
+
+.faq caption {
+  font-size: 26px;
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+
+.faq td, th {
+  border: 3px dotted black;
+}
+
+.faq td {
+  padding: 20px;
+  font-size: 18px;
+}
+
+.faq th {
+  padding: 20px;
+  font-style: italic;
+}
+
+.faq .altrow {
+  background-color: #befac2;
+}
+
+.faq a {
+  color: #2c1936;
+  text-decoration: underline;
+}
+
+.img-left {
+  width: 300px;
+  float: left;
+  margin-right: 20px;
+}
+
+.img-right {
+  width: 300px;
+  float: right;
+  margin-left: 20px;
+}
+
+.button {
+  padding: 15px;
+  font-size: 18px;
+}
+
+.question {
+  font-size: 22px;
+}
+
+.buttonContainer {
+  margin-top: 40px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 30px;
+}
+
+.buttonContainer button {
+  font-size: 16px;
+  padding: 15px;
+  width: 200px;
+}
+
+.newsletterForm {
+  margin-top: 40px;
+  display: none;
+}
+
+.newsletterForm form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.newsletterForm button {
+  width: 200px;
+}
+
+.submissionForm {
+  display: none;
+}
+
+.satisfactionForm {
+  margin-top: 40px;
+  display: none;
+}
+
+.satisfactionForm form {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+#satisfaction {
+  width: 300px;
+}
+
+#frontpageImage p {
+  color: #8dfdc5;
+}

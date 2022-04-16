@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Sightings and News</title>
+    <link rel='stylesheet' type='text/css' href='style.css'>
+    <style>
+      br {
+        line-height: 2em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class='content'>
+      <div class='topSection'>
+        <header>
+          <h1>Decrypting Cryptids</h1>
+        </header>
+
+        <nav>
+          <a href='index.html'>Home</a>
+          <a href='about.html'>What Is A Cryptid?</a>
+          <a href='cryptid1.html'>Creatures of Interest</a>
+          <a href='submit.html'>Sightings and News</a>
+        </nav>
+      </div>
+
+      <main class='middleSection'>
+        <h2>Sightings and News</h2>
+        <div class='buttonContainer'>
+          <button type='button' id='newsletterButton'>Sign Up for Newsletter</button>
+          <button type='button' id='sightingButton'>Submit a Sighting</button>
+          <button type='button' id='satisfactionButton'>Rate Our Site</button>
+        </div>
+
+        <div class='newsletterForm'>
+          <form method='get'>
+            <div>
+              <label for='mail'>Please input your email:</label>
+              <input type='email' id='mail' size='30'>
+            </div>
+            <button type='submit'>Submit</button>
+          </form>
+        </div>
+
+        <div class='submissionForm'>
+          <form method='get'>
+            <fieldset>
+              <legend>Your Information</legend>
+              <label for='first' class='question'>First Name: </label><input type='text' name='first' id='first'><p></p>
+              <label for='last' class='question'>Last Name: </label><input type='text' name='last' id='last'><p></p>
+              <label for='email' class='question'>Email: </label><input type='email' name='email' id='email'><p></p>
+              <label for='phone' class='question'>Phone Number: </label><input type='tel' name='phone' id='phone'><p></p>
+            </fieldset>
+            
+            <br>
+
+            <fieldset>
+              <legend>About Your Sighting</legend>
+              <p class='question'>What type of creature did you see?</p>
+                <select size='1'>
+                  <option>Please select the broad type</option>
+                  <option value='humanoid'>Humanoid</option>
+                  <option value='dragon'>Dragon/Reptile</option>
+                  <option value='beast'>Beast/Mammal</option>
+                  <option value='et'>Extraterrestrial</option>
+                  <option value='artificial'>Artificial Life Form</option>
+                  <option value='ethereal'>Ethereal</option>
+                  <option value='human'>Anomalous Human</option>
+                  <option value='plant'>Plant</option>
+                </select>
+
+              <br>
+
+              <p class='question'>Where did this sighting take place?</p>
+                <input type='radio' name='placeNationalPark' id='nationalPark' value='nationalPark'>National park<br>
+                <input type='radio' name='placecityLimits' id='cityLimits' value='cityLimits'>Within city limits<br>
+                <input type='radio' name='placePrivate' id='private' value='private'>Private residence<br>
+                <input type='radio' name='placePublic' id='publicLand' value='publicLand'>Public land<br>
+
+              <p class='question'>What type of evidence did you collect?</p>
+                <input type='checkbox' name='eyewitness' id='eyewitness' value='yes'>Eyewitness testimony<br>
+                <input type='checkbox' name='photo' id='photo' value='yes'>Photograph<br>
+                <input type='checkbox' name='video' id='video' value='yes'>Video<br>
+                <input type='checkbox' name='audio' id='audio' value='yes'>Audio recording<br>
+                <input type='checkbox' name='physical' id='physical' value='yes'>Physical evidence<br>
+
+              <br>
+
+              
+            <label class='question'>Describe your sighting:</label><br>
+            <textarea name='description' cols='50' rows='4'></textarea>
+            </fieldset>
+
+            <br>
+
+            <button type='submit' class='button'>Submit my sighting</button> &nbsp; <input type='reset' class='button'>
+          </form>
+        </div>
+
+        <div class='satisfactionForm'>
+          <form method='get'>
+            <label for='satisfaction'>Please rate your satisfaction with this site on a scale of 1 to 10</label>
+            <input type='range' id='satisfaction' name ='satisfaction' min='1' max='10' value='5'>
+            <span id='satisfactionAmount'></span>
+            <button type='submit' class='button'>Submit</button>
+          </form>
+        </div>
+
+      </main>
+    </div>
+
+    <div class='bottomSection'>
+      <footer>
+        <p>Keep your eyes open, and your footsteps light!</p>
+        <p>&copy; 2022 Travis Vawser</p>
+      </footer>
+    </div>
+    
+    <script>
+      const newsletterButton = document.getElementById('newsletterButton');
+      const sightingButton = document.getElementById('sightingButton');
+      const satisfactionButton = document.getElementById('satisfactionButton');
+      const buttonContainer = document.querySelector('.buttonContainer');
+      const newsletterForm = document.querySelector('.newsletterForm');
+      const submissionForm = document.querySelector('.submissionForm');
+      const satisfactionForm = document.querySelector('.satisfactionForm');
+      const satisfaction = document.getElementById('satisfaction');
+      const satisfactionAmount = document.getElementById('satisfactionAmount');
+
+      function handleNewsletter() {
+        buttonContainer.style.display = 'none';
+        newsletterForm.style.display = 'block';
+      }
+
+      function handleSighting() {
+        buttonContainer.style.display = 'none';
+        submissionForm.style.display = 'block';
+      }
+
+      function handleSatisfaction() {
+        buttonContainer.style.display = 'none';
+        satisfactionForm.style.display = 'flex';
+      }
+
+      function handleSatChange(e) {
+        console.log(e);
+        satisfactionAmount.textContent = this.value;
+      }
+
+      satisfactionAmount.textContent = satisfaction.value;
+
+      newsletterButton.addEventListener('click', handleNewsletter);
+      sightingButton.addEventListener('click', handleSighting);
+      satisfactionButton.addEventListener('click', handleSatisfaction);
+      satisfaction.addEventListener('input', handleSatChange);
+    </script>
+  </body>
+</html>
